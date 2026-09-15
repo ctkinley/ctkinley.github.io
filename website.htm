@@ -54,7 +54,7 @@
     const btn = document.getElementById("movingButton");
     const info = document.getElementById("information");
     btn.addEventListener("click", () => {
-      clicks = clicks + 1
+      clicks++;
       btn.style.left = Math.floor(Math.random()*700)+"px";
       btn.style.top = Math.floor(Math.random()*200)+"px";
       btn.style.background = "#"+Math.floor(Math.random()*1000000);
@@ -66,7 +66,7 @@
           factNum=0;
         }
         else{
-          factNum=factNum+1;
+          factNum++;
         }  
       }
     });
