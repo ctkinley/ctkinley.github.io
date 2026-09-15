@@ -41,20 +41,24 @@
   <h1>
     About Chris Kinley
   </h1>
+    <p id="information">
+
+  </p>
    <button id="movingButton">
     Click to find out more about me
   </button>
-  <p id="information"> big if true
 
-  </p>
   <script>
-    const facts = ["hi1","hi2","hi3","hi4"];
+    const facts = ["Hi, I am Chris Kinley, a second year Master's student in Khoury College of Sciences at the Roux Institute. I am studying to get a masters degree in Data Science.",
+                   "In 2023, I graduated from University of Rochester with a B.S. in Mathematicss. After I finished, I was told that if I had taken one additional class, I could have graduated with a major in Economics as well ",
+                  "I am an eagle scout from Troop 93 in Maine. I enjoy Camping and Hiking",
+                   "I currently work at MaineHealth doing data analysis for various different groups"];
     var numClicks = 0;
     const btn = document.getElementById("movingButton");
     const info = document.getElementById("information");
     btn.addEventListener("click", () => {
       btn.style.left = Math.floor(Math.random()*700)+200+"px";
-      btn.style.top = Math.floor(Math.random()*200)+200+"px";
+      btn.style.top = Math.floor(Math.random()*500)+200+"px";
       btn.style.background = "#"+Math.floor(Math.random()*1000000);
       numClicks = numClicks + 1;
       const fact = facts[(Math.floor(numClicks/4))%4];
