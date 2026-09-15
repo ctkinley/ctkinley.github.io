@@ -48,16 +48,27 @@
 
   </p>
   <script>
-    const facts = ["hi"];
+    const facts = ["hi1","hi2","hi3","hi4"];
     const clicks = 0;
+    const factNum = 0;
     const btn = document.getElementById("movingButton");
     const info = document.getElementById("information");
     btn.addEventListener("click", () => {
+      clicks = clicks + 1
       btn.style.left = Math.floor(Math.random()*700)+"px";
       btn.style.top = Math.floor(Math.random()*200)+"px";
       btn.style.background = "#"+Math.floor(Math.random()*1000000);
       const fact = "hi";
-      info.textContent = fact;
+      if (clicks==3){
+        clicks = 0;
+        info.textContent = fact[factNum];
+        if (factNum>=facts.Length){
+          factNum=0;
+        }
+        else{
+          factNum=factNum+1;
+        }  
+      }
     });
   </script>
 
