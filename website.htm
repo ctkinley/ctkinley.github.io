@@ -49,16 +49,15 @@
   </p>
   <script>
     const facts = ["hi1","hi2","hi3","hi4"];
-    const numClicks = 0;
+    var numClicks = 0;
     const btn = document.getElementById("movingButton");
     const info = document.getElementById("information");
     btn.addEventListener("click", () => {
       btn.style.left = Math.floor(Math.random()*700)+200+"px";
       btn.style.top = Math.floor(Math.random()*200)+200+"px";
       btn.style.background = "#"+Math.floor(Math.random()*1000000);
-      //numClicks = numClicks + 1;
-      const fact = facts[1];
-      //facts[(Math.floor(numClicks/4))%4]
+      numClicks = numClicks + 1;
+      const fact = facts[(Math.floor(numClicks/4))%4];
       info.textContent = fact;
     });
   </script>
