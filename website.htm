@@ -56,7 +56,12 @@
       btn.style.left = Math.floor(Math.random()*700)+200+"px";
       btn.style.top = Math.floor(Math.random()*200)+200+"px";
       btn.style.background = "#"+Math.floor(Math.random()*1000000);
-      const fact = facts[3];
+      if (clicks>15){
+        clicks=0;
+      } else{
+        clicks++
+      }
+      const fact = facts[Math.floor(clicks/4)];
       info.textContent = fact;
     });
   </script>
